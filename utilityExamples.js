@@ -13,3 +13,7 @@ const getOnlyUniqueByHighestTimestamp = (acc = [], curr = {}) => {
 }
 
 // console.log('Unique by highest timestamp: ', getOnlyUniqueByHighestTimestamp(inputWithHighest, { "productId": 1, "timestamp": 3 }));
+
+const skus = "DW00100038, DW00100037"
+const makeSkuArray = (skus) => skus.split(',').map((r) => `'${r.trim()}'`)
+// console.log(`AND items.Sku IN (${ makeSkuArray(skus) })`)
