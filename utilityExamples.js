@@ -18,3 +18,12 @@ const checkForItemInArray = (it) => {
 	const arrayToCheck = ['integration-28', 'integration-30', 'integration-31']
 	return arrayToCheck.some(item => it.includes(item))
 }
+
+//Gives number of occurrences of each letter in specified string
+charCount = s => {
+	var uchars = {};
+	s.replace(/\S/g, l => {
+		uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1)
+	})
+	return uchars;
+}
