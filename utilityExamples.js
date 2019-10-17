@@ -27,3 +27,16 @@ charCount = s => {
 	})
 	return uchars;
 }
+
+// Finding factors of a number
+const factors = n => {
+	let output = [];
+	for (let i = 2; i <= Math.sqrt(n); i++) {
+		if (n % i === 0) {
+			output.push(i);
+			if (i !== Math.sqrt(n)) output.push(n / i);
+		}
+	}
+	if (output.indexOf(n) === -1) output.push(n);
+	return output;
+}
