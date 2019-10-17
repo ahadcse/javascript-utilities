@@ -40,3 +40,10 @@ const factors = n => {
 	if (output.indexOf(n) === -1) output.push(n);
 	return output;
 }
+
+// Filtering technique. Finding total drink price.
+const cart = [{ name: "Drink", price: 3.12 },
+{ name: "Steak", price: 45.15 },
+{ name: "Drink", price: 11.01 }];
+
+console.log(`Total: ${cart.filter(x => x.name === 'Drink').map(x => x.price).reduce((t, v) => t += v).toFixed(2)}`)
