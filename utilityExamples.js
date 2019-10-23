@@ -48,6 +48,11 @@ const cart = [{ name: "Drink", price: 3.12 },
 
 console.log(`Total: ${cart.filter(x => x.name === 'Drink').map(x => x.price).reduce((t, v) => t += v).toFixed(2)}`)
 
+//Remove duplicate item from array
+function uniq(a) {
+	return Array.from(new Set(a));
+}
+
 //Shorter way to remove duplicate item from array
 let unique = a => [...new Set(a)];
 
