@@ -56,3 +56,11 @@ function uniq(a) {
 //Shorter way to remove duplicate item from array
 let unique = a => [...new Set(a)];
 
+// Checking whether an array is a subarray of another array or not
+function isSubArray(subArray, array) {
+	for (var i = 0, len = subArray.length; i < len; i++) {
+		if (inArray(subArray[i], array) == -1) return false;
+	}
+	return true;
+}
+
